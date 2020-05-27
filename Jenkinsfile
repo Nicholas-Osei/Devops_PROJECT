@@ -4,7 +4,7 @@ pipeline
     {
         node
         {
-            label 'raspberrypi'
+            label 'raspberry pi'
         }
     }
     stages
