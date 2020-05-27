@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > button {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+  line-height: 275px;
+  font-size: 30px;
+  padding :0%;
+
+}
+.Back
+{
+    background-color: #ffffff;
+    position:absolute;
+    width:400px;
+    height:150px;
+    background:#063;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+    font-size: 30px;
+    color:white
+}
+
+h1
+{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Kies je Schilderij</h1>
+<div class="flex-container">
+<button type="button" onclick="window.location.href='{{ url_for('leds',number=0)}}';" onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Sterrennacht</button>
+<button type="button" onclick="window.location.href='{{ url_for('leds',number=1)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De Schreeuw</button>
+<button type="button" onclick="window.location.href='{{ url_for('leds',number=2)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De volharding der herinnerin</button>  
+</div>
+<button class="Back" onclick="window.location.href='{{ url_for('home')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#063';">Terug Naar HoofdPagina</button>
+</body>
+</html>
+
