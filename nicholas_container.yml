@@ -4,5 +4,5 @@
   connection:  local
   tasks:
    - name: het aanmaken van de webserver
-     shell: docker create --name nicholas_webserver nicholas_image
+     shell: sudo docker create --name nicholas_webserver nicholas_image
 
