@@ -4,6 +4,7 @@
 #RUN pip install RPi.GPIO
 #RUN pip install flask
 
+FROM ubuntu:18.04
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
 
@@ -12,5 +13,6 @@ RUN pip install -r requirements.txt
 
 COPY httpsrv_Nicholas.py .                              
 CMD ["echo","Python script copied"]
+
 ENTRYPOINT [ "python" ]
 CMD [httpsrv_Nicholas.py]
