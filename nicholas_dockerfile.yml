@@ -7,5 +7,5 @@
    - name: het aanmaken van de image
      shell: |
       cd /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops
-      docker build -t nicholas_image .
+      sudo docker build -t nicholas_image .
 
