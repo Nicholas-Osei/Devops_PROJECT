@@ -1,5 +1,6 @@
 ---
 - hosts: rpi_Nicholas
+  connection:  local
   become: true
   tasks:
    - name: pull python
