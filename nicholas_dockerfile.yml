@@ -1,7 +1,7 @@
 ---
 - name: installeren van lib
   hosts: rpi_Nicholas
-
+  connection:  local
   tasks:
   
    - name: het aanmaken van de image
