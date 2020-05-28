@@ -1,14 +1,5 @@
 pipeline {
     agent {node{label'raspberry pi'}}
-    "HostConfig": {
-        "Devices": [
-            {
-                "PathOnHost": "/dev/gpiomem",
-                "PathInContainer": "/dev/gpiomem",
-                "CgroupPermissions": "rwm"
-            }
-        ]
-    }
     stages {
     stage("Ping"){
         steps{
