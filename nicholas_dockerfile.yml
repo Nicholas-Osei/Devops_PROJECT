@@ -8,5 +8,5 @@
      shell: |
       cd /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops
       sudo docker build -t nicholas_image .
-      sudo docker run nicholas_image
+      
 
