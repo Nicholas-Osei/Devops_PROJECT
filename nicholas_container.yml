@@ -5,5 +5,5 @@
   become: true
   tasks:
    - name: het aanmaken van de webserver
-     shell: docker create --name nicholas_webserver nicholas_image
+     shell: docker create --privileged  --name nicholas_webserver nicholas_image
 
