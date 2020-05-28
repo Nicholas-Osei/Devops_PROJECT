@@ -32,41 +32,16 @@ app = Flask(__name__)
 
 @app.route("/") 
 def home(name=None):
-	output= "<!DOCTYPE html>
-<html>
-<head>
-<style>
-.flex-container {
-  display: flex;
-  justify-content: center;
-}
+	output= "
+		<h1>Maak een keuze</h1>
 
-.flex-container > button {
-  background-color: #f1f1f1;
-  width: 400px;
-  margin: 50px;
-  text-align: center;
-  line-height: 275px;
-  font-size: 30px;
-  padding :0%;
-
-}
-h1
-{
-    text-align: center;
-}
-</style>
-</head>
-<body>
-<h1>Maak een keuze</h1>
-
-<div class="flex-container">
-<button type="button" onclick="window.location.href='{{ url_for('ruben')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rubens</button> 
-<button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> 
-<button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> 
-</div>
-</body>
-</html>"
+		<div class="flex-container">
+		<button type="button" onclick="window.location.href='{{ url_for('ruben')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rubens</button> 
+		<button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> 
+		<button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> 
+		</div>
+		</body>
+		</html>"
 	return output
    	#return render_template('Nicholas_Flask.html', name=name)
 
