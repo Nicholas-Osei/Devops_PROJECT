@@ -1,17 +1,16 @@
 # flask_web/app.py
 
-from flask import Flask
-app = Flask(__name__)
+#from flask import Flask
+#app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hey, we have Flask in a Docker container!'
+#@app.route('/')
+#def hello_world():
+#    return 'Hey, we have Flask in a Docker container!'
 
 
-if __name__ == '__main__': 
-	app.run(debug=True,host='0.0.0.0')
-#if __name == '__main__':
- #   app.run(debug=True, host='0.0.0.0')
+#if __name__ == '__main__': 
+#	app.run(debug=True,host='0.0.0.0')
+
 
 
 
@@ -19,8 +18,8 @@ if __name__ == '__main__':
 
 
 #import RPi.GPIO as GPIO
-#from flask import Flask,url_for,render_template
-#app = Flask(__name__)
+from flask import Flask,url_for,render_template
+app = Flask(__name__)
 
 #GPIO.setmode(GPIO.BCM)
 #GPIO.setwarnings(False)
@@ -31,15 +30,15 @@ if __name__ == '__main__':
  #	GPIO.setup(index, GPIO.OUT)
  #	GPIO.output(index, GPIO.LOW)
 
-#@app.route("/") 
-#def home(name=None):
- #   	return render_template('Nicholas_Flask.html', name=name)
+@app.route("/") 
+def home(name=None):
+   	return render_template('Nicholas_Flask.html', name=name)
 
-#@app.route("/rubens") 
-#def ruben(name=None):
-#	return render_template('rubens.html')
+@app.route("/rubens") 
+def ruben(name=None):
+	return render_template('rubens.html')
 
-#@app.route("/Leds/<int:number>") 
+@app.route("/Leds/<int:number>") 
 #def leds(number):
 #	for index in ledPins:
 #		if index == number:
@@ -56,13 +55,13 @@ if __name__ == '__main__':
 #	else:
 #		return render_template('rembrandt.html')
 
-#@app.route("/van-hogh")
-#def vanhogh(name=None):
- #   return render_template('van-hogh.html', name=name)
+@app.route("/van-hogh")
+def vanhogh(name=None):
+    return render_template('van-hogh.html', name=name)
 
-#@app.route("/rembrandt")
-#def rembrandt(name=None):
- #   return render_template('rembrandt.html', name=name)
+@app.route("/rembrandt")
+def rembrandt(name=None):
+    return render_template('rembrandt.html', name=name)
 
-#if __name__ == '__main__': 
-#	app.run(host='0.0.0.0')
+if __name__ == '__main__': 
+	app.run(host='0.0.0.0')
