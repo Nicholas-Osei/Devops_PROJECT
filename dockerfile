@@ -1,8 +1,16 @@
-FROM python:3
-EXPOSE 5000
-RUN apt-get update
-RUN pip install RPi.GPIO
-RUN pip install flask
+#FROM python:3
+#EXPOSE 5000
+#RUN apt-get update
+#RUN pip install RPi.GPIO
+#RUN pip install flask
+
+RUN apt-get update -y && \
+    apt-get install -y python-pip python-dev
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
 COPY httpsrv_Nicholas.py .                              
 CMD ["echo","Python script copied"]
-CMD ["python3","httpsrv_Nicholas.py"]
+ENTRYPOINT [ "python" ]
+CMD [httpsrv_Nicholas.py]
