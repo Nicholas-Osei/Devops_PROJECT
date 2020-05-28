@@ -1,10 +1,10 @@
-#FROM python:3
+FROM python:3
 #EXPOSE 5000
 #RUN apt-get update
 #RUN pip install RPi.GPIO
 #RUN pip install flask
 
-FROM ubuntu:18.04
+#FROM ubuntu:18.04
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
 
