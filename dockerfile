@@ -14,5 +14,5 @@ RUN pip install -r requirements.txt
 COPY httpsrv_Nicholas.py .                              
 CMD ["echo","Python script copied"]
 
-ENTRYPOINT [ "python" ]
-CMD [httpsrv_Nicholas.py]
+#ENTRYPOINT [ "python" ]
+CMD ["python3","httpsrv_Nicholas.py"]
