@@ -2,7 +2,8 @@
 - name: het aanmaken van de container
   hosts: rpi_Nicholas
   connection:  local
+  become: true
   tasks:
    - name: het aanmaken van de webserver
-     shell: sudo docker create --name nicholas_webserver nicholas_image
+     shell: docker create --name nicholas_webserver nicholas_image
 
