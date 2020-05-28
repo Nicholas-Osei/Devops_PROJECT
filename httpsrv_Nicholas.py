@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-
-
 # flask_web/app.py
 
 From flask import Flask
