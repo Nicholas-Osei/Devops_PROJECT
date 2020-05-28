@@ -1,0 +1,6 @@
+---
+- hosts: rpi_Nicholas
+  become: true
+  tasks:
+   - name: pull python
+     shell: docker pull python:3
