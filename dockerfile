@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY static/ .
 COPY templates/ .
-
+COPY Nicholas_Flask.html .
 COPY httpsrv_Nicholas.py .                              
 CMD ["echo","Python script copied"]
 
