@@ -16,7 +16,7 @@ RUN pwd
 
 #RUN echo "$PWD"
 
-CMD ["pwd"]
+#CMD ["pwd"]
 CMD ["ls"]
 EXPOSE 5000
 
