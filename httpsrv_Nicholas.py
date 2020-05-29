@@ -54,7 +54,7 @@ h1
     text-align: center;
 }
 </style><h1>Maak een keuze</h1>
-	<div class="flex-container"><button type="button" onclick="ruben()"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">lol</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
+	<div class="flex-container"><button type="button" style="background: url(facebook.png)"onclick="ruben()"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">lol</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
 	return output
 
 @app.route("/rubens") 
