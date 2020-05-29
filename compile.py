@@ -1,3 +1,5 @@
 import py_compile
+import os
 
-py_compile.compile("/Nicholas_Flask_Webserver/httpsrv_Nicholas.py")
+os.chdir("/Nicholas_Flask_Webserver/)
+py_compile.compile("httpsrv_Nicholas.py")
