@@ -151,7 +151,7 @@ h1
   <button type="button" onclick="window.location.href='{{ url_for('leds',number=5)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De schepping van Adam</button>  
 </div>
 <button class="Back" onclick="window.location.href='{{ url_for('home')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#063';">Terug Naar HoofdPagina</button>"""
-		return output
+	return output
 
 @app.route("/rembrandt")
 def rembrandt(name=None):
