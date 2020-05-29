@@ -19,7 +19,7 @@
 
 #import RPi.GPIO as GPIO
 from flask import Flask,url_for,render_template
-app = Flask(__name__)
+app = Flask(__name__,template_folder='template')
 
 #GPIO.setmode(GPIO.BCM)
 #GPIO.setwarnings(False)
