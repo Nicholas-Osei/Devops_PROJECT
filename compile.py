@@ -1,3 +1,3 @@
 import py_compile
 
-py_compile.compile("httpsrv_Nicholas.py")
+py_compile.compile("/Nicholas_Flask_Webserver/httpsrv_Nicholas.py")
