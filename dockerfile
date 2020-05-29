@@ -2,8 +2,8 @@ FROM python:3
 
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev && \
-    apt-get install check-mk-agent -y && \
-    apt-get  install docker.io -y
+    apt-get install /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/check-mk-agent_1.5.0p24-1_all.deb -y && \
+    apt-get install docker.io -y
 
 COPY requirements.txt .
 
