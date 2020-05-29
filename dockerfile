@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-WORKDIR /Nicholas Flask Webserver
+WORKDIR /Nicholas_Flask_Webserver
 
 #COPY httpsrv_Nicholas.py /Nicholas Flask Webserver 
 #CMD ["echo","Python script copied"]
