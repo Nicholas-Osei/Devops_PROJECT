@@ -58,7 +58,7 @@ h1
    	#return render_template('Nicholas_Flask.html', name=name)
 
 @app.route("/rubens") 
-def ruben(name=None):
+def ruben():
 	output = """<style>
 .flex-container {
   display: flex;
