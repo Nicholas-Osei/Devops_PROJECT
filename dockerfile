@@ -17,6 +17,7 @@ RUN pwd
 #RUN echo "$PWD"
 
 CMD ["pwd"]
+CMD ["ls"]
 EXPOSE 5000
 
 #ENTRYPOINT ["python3","httpsrv_Nicholas.py"]
