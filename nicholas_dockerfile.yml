@@ -1,5 +1,5 @@
 ---
-- name: installeren van lib
+- name: Installeren van lib
   hosts: rpi_Nicholas
   connection:  local
   tasks:
