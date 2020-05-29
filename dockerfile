@@ -1,7 +1,9 @@
 FROM python:3
 
 RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
+    apt-get install -y python-pip python-dev && \
+    apt-get install check-mk-agent -y && \
+    apt-get  install docker.io -y
 
 COPY requirements.txt .
 
