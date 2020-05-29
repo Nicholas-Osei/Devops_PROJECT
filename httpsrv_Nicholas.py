@@ -19,7 +19,7 @@
 
 #import RPi.GPIO as GPIO
 from flask import Flask,url_for,render_template
-app = Flask(__name__,template_folder='templates')
+app = Flask(__name__)
 
 #GPIO.setmode(GPIO.BCM)
 #GPIO.setwarnings(False)
@@ -33,7 +33,29 @@ app = Flask(__name__,template_folder='templates')
 
 @app.route("/") 
 def home(name=None):
-   	return render_template('Nicholas_Flask.html', name=name)
+   	output= """<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > button {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+  line-height: 275px;
+  font-size: 30px;
+  padding :0%;
+
+}
+h1
+{
+    text-align: center;
+}
+</style><h1>Maak een keuze</h1>
+	<div class="flex-container"><button type="button" onclick="ruben()"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">lol</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
+	return output
 
 @app.route("/rubens") 
 def ruben():
