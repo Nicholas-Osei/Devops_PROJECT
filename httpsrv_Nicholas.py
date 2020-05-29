@@ -29,34 +29,6 @@ app = Flask(__name__)
 #for index in ledPins:
  #	GPIO.setup(index, GPIO.OUT)
  #	GPIO.output(index, GPIO.LOW)
-
-@app.route("/") 
-def home(name=None):
-	output= """<style>
-.flex-container {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-container > button {
-  background-color: #f1f1f1;
-  width: 400px;
-  margin: 50px;
-  text-align: center;
-  line-height: 275px;
-  font-size: 30px;
-  padding :0%;
-
-}
-h1
-{
-    text-align: center;
-}
-</style><h1>Maak een keuze</h1>
-	<div class="flex-container"><button type="button" onclick="ruben()"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">lol</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
-	return output
-   	#return render_template('Nicholas_Flask.html', name=name)
-
 @app.route("/rubens") 
 def ruben():
 	output = """<style>
@@ -104,6 +76,35 @@ h1
 </div>
 <button class="Back" onclick="window.location.href='{{ url_for('home')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#063';">Terug Naar HoofdPagina</button>"""
 	return output
+
+
+@app.route("/") 
+def home(name=None):
+	output= """<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > button {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+  line-height: 275px;
+  font-size: 30px;
+  padding :0%;
+
+}
+h1
+{
+    text-align: center;
+}
+</style><h1>Maak een keuze</h1>
+	<div class="flex-container"><button type="button" onclick="ruben()"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">lol</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
+	return output
+   	#return render_template('Nicholas_Flask.html', name=name)
+
 
 @app.route("/van-hogh")
 def vanhogh(name=None):
