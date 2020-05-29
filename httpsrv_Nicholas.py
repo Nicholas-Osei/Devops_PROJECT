@@ -33,7 +33,7 @@ app = Flask(__name__)
 
 @app.route("/") 
 def home(name=None):
-   	output= """<style>
+	output= """<style>
 .flex-container {
   display: flex;
   justify-content: center;
