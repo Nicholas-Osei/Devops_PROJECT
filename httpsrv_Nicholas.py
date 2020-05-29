@@ -32,8 +32,8 @@ app = Flask(__name__)
 
 @app.route("/") 
 def home(name=None):
-	output= "<h1>Maak een keuze</h1>"
-	#<div class="flex-container"><button type="button" onclick="window.location.href='{{ url_for('ruben')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rubens</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"
+	output= """<h1>Maak een keuze</h1>
+	<div class="flex-container"><button type="button" onclick="window.location.href='{{ url_for('ruben')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rubens</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
 	return output
    	#return render_template('Nicholas_Flask.html', name=name)
 
