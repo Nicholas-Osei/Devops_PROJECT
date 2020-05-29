@@ -3,8 +3,6 @@ FROM python:3
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev && \
 
-    
-RUN apt-get install docker.io
 
 COPY requirements.txt .
 
