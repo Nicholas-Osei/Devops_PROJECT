@@ -8,6 +8,13 @@ pipeline {
             echo "Ping Gelukt!"
       }
     }
+    stage("Compile"){
+        steps{
+            echo "Controleren op fouten in je bestanden(tabs, foute import enz...)"
+            sh " compile.py"
+            echo "Geen error Gevonden!"
+      }
+    }
     stage("Image") {
       steps{
           echo "Image aan het maken..."
