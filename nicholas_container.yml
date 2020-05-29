@@ -6,4 +6,6 @@
   tasks:
    - name: het aanmaken van de webserver
      shell: docker create --privileged  --name nicholas_webserver nicholas_image
+   - name: Container starten
+     shell: docker run  -p 5000:5000 nicholas_image
 
