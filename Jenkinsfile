@@ -11,7 +11,7 @@ pipeline {
     stage("Compile"){
         steps{
             echo "Controleren op fouten in je bestanden(tabs, foute import enz...)"
-            sh " compile.py"
+            sh " python3 compile.py"
             echo "Geen error Gevonden!"
       }
     }
