@@ -12,6 +12,6 @@ CMD ["echo","Python script copied"]
 
 EXPOSE 5000
 
-ENTRYPOINT["python3"]
-CMD["httpsrv_Nicholas.py"]
+ENTRYPOINT ["python3","httpsrv_Nicholas.py"]
+#CMD["httpsrv_Nicholas.py"]
 #CMD ["python3","httpsrv_Nicholas.py"]
