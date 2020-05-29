@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 
 WORKDIR /Nicholas_Flask_Webserver
 
-#COPY httpsrv_Nicholas.py /Nicholas Flask Webserver 
+COPY httpsrv_Nicholas.py .
 #CMD ["echo","Python script copied"]
 
 EXPOSE 5000
