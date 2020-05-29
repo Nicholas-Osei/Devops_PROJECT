@@ -14,6 +14,9 @@ WORKDIR /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webse
 
 RUN pwd
 
+RUN echo "$PWD"
+
+CMD ["echo","hahaha"]
 EXPOSE 5000
 
 ENTRYPOINT ["python3","/Nicholas_Flask_Webserver/httpsrv_Nicholas.py"]
