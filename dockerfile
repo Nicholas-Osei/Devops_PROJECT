@@ -7,10 +7,9 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-#WORKDIR /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
+WORKDIR /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
 
-RUN cd /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
-#COPY httpsrv_Nicholas.py .
+COPY httpsrv_Nicholas.py /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
 #CMD ["pwd"]
 
 #RUN pwd
