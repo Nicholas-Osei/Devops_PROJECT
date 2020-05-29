@@ -59,32 +59,145 @@ h1
 
 @app.route("/rubens") 
 def ruben(name=None):
-	return render_template('rubens.html')
+	output = """<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
 
-@app.route("/Leds/<int:number>") 
-#def leds(number):
-#	for index in ledPins:
-#		if index == number:
-#			continue
-#		GPIO.output(index, GPIO.LOW)
-#	if GPIO.input(ledPins[number])==GPIO.HIGH:
-#		GPIO.output(ledPins[number],GPIO.LOW)
-#	else:
-#		GPIO.output(ledPins[number],GPIO.HIGH)
-#	if number < 3 :
-#		return render_template('rubens.html')
-#	elif number < 6 :
-#		return render_template('van-hogh.html')
-#	else:
-#		return render_template('rembrandt.html')
+.flex-container > button {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+  line-height: 275px;
+  font-size: 30px;
+  padding :0%;
+
+}
+.Back
+{
+    background-color: #ffffff;
+    position:absolute;
+    width:400px;
+    height:150px;
+    background:#063;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+    font-size: 30px;
+    color:white
+}
+
+h1
+{
+    text-align: center;
+}
+</style>
+
+<h1>Kies je Schilderij</h1>
+<div class="flex-container">
+<button type="button" onclick="window.location.href='{{ url_for('leds',number=0)}}';" onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Sterrennacht</button>
+<button type="button" onclick="window.location.href='{{ url_for('leds',number=1)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De Schreeuw</button>
+<button type="button" onclick="window.location.href='{{ url_for('leds',number=2)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De volharding der herinnerin</button>  
+</div>
+<button class="Back" onclick="window.location.href='{{ url_for('home')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#063';">Terug Naar HoofdPagina</button>"""
+	return output
 
 @app.route("/van-hogh")
 def vanhogh(name=None):
-    return render_template('van-hogh.html', name=name)
+	output = """<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > button {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+  line-height: 275px;
+  font-size: 30px;
+  padding :0%;
+
+}
+.Back
+{
+    background-color: #ffffff;
+    position:absolute;
+    width:400px;
+    height:150px;
+    background:#063;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+    font-size: 30px;
+    color:white
+}
+
+h1
+{
+    text-align: center;
+}
+</style>
+<h1>Kies je Schilderij</h1>
+
+<div class="flex-container">
+  <button type="button" onclick="window.location.href='{{ url_for('leds',number=3)}}';" onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Het meisje met de Parel</button>
+  <button type="button" onclick="window.location.href='{{ url_for('leds',number=4)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De Nachtwacht</button>
+  <button type="button" onclick="window.location.href='{{ url_for('leds',number=5)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De schepping van Adam</button>  
+</div>
+<button class="Back" onclick="window.location.href='{{ url_for('home')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#063';">Terug Naar HoofdPagina</button>"""
+    return output
 
 @app.route("/rembrandt")
 def rembrandt(name=None):
-    return render_template('rembrandt.html', name=name)
+	output = """<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > button {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+  line-height: 275px;
+  font-size: 30px;
+  padding :0%;
+}
+.Back
+{
+    background-color: #ffffff;
+    position:absolute;
+    width:400px;
+    height:150px;
+    background:#063;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+    font-size: 30px;
+    color:white
+}
+h1
+{
+    text-align: center;
+}
+</style>
+<h1>Kies je Schilderij</h1>
+
+<div class="flex-container">
+  <button type="button" onclick="window.location.href='{{ url_for('leds',number=6)}}';" onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">De Mona Lisa</button>
+  <button type="button" onclick="window.location.href='{{ url_for('leds',number=7)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">Het laatste Avondmaal</button>
+  <button type="button" onclick="window.location.href='{{ url_for('leds',number=8)}}';" onmouseover="this.style.background='lightblue';" onmouseout="this.style.background='#f1f1f1';">De Nachtwacht</button>  
+</div>
+<button class="Back" onclick="window.location.href='{{ url_for('home')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#063';">Terug Naar HoofdPagina</button> """
+    return output
 
 if __name__ == '__main__': 
 	app.run(host='0.0.0.0')
