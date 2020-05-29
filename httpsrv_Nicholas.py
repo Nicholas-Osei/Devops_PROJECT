@@ -30,7 +30,7 @@ app = Flask(__name__)
  #	GPIO.setup(index, GPIO.OUT)
  #	GPIO.output(index, GPIO.LOW)
 
-@app.route("/rubens") 
+@app.route("/") 
 def home(name=None):
 	output= """<style>
 .flex-container {
@@ -53,11 +53,11 @@ h1
     text-align: center;
 }
 </style><h1>Maak een keuze</h1>
-	<div class="flex-container"><button type="button" onclick="window.open('http://www.facebook.com/')"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rubens</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
+	<div class="flex-container"><button type="button" onclick="window.open('http://www.facebook.com/')"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">lol</button> <button type="button" onclick="window.location.href='{{ url_for('vanhogh')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Van-Hogh</button> <button type="button" onclick="window.location.href='{{ url_for('rembrandt')}}';"onmouseover="this.style.background='lightblue';"onmouseout="this.style.background='#f1f1f1';">Rembrandt</button> </div>"""
 	return output
    	#return render_template('Nicholas_Flask.html', name=name)
 
-@app.route("/") 
+@app.route("/rubens") 
 def ruben():
 	output = """<style>
 .flex-container {
