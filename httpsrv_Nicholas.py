@@ -30,7 +30,7 @@ app = Flask(__name__)
  #	GPIO.setup(index, GPIO.OUT)
  #	GPIO.output(index, GPIO.LOW)
 
-@app.route("/") 
+@app.route("/rubens") 
 def home(name=None):
 	output= """<style>
 .flex-container {
@@ -57,7 +57,7 @@ h1
 	return output
    	#return render_template('Nicholas_Flask.html', name=name)
 
-@app.route("/rubens") 
+@app.route("/") 
 def ruben():
 	output = """<style>
 .flex-container {
