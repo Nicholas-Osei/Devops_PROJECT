@@ -7,7 +7,9 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-COPY httpsrv_Nicholas.py .                              
+WORKDIR /app
+
+COPY httpsrv_Nicholas.py /app                             
 CMD ["echo","Python script copied"]
 
 EXPOSE 5000
