@@ -9,15 +9,15 @@ RUN pip install -r requirements.txt
 
 WORKDIR /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
 
-COPY httpsrv_Nicholas.py /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
-#CMD ["pwd"]
+COPY httpsrv_Nicholas.py 
 
-#RUN pwd
 
-#RUN echo "$PWD"
+RUN pwd
 
-#CMD ["echo","hahaha"]
+RUN echo "$PWD"
+
+CMD ["echo","hahaha"]
 EXPOSE 5000
 
-ENTRYPOINT ["python3","httpsrv_Nicholas.py"]
+#ENTRYPOINT ["python3","httpsrv_Nicholas.py"]
 
