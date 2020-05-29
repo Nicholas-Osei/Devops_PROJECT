@@ -10,7 +10,9 @@ RUN pip install -r requirements.txt
 WORKDIR /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops/Nicholas_Flask_Webserver/
 
 #COPY httpsrv_Nicholas.py .
-#CMD ["echo","Python script copied"]
+#CMD ["pwd"]
+
+RUN pwd
 
 EXPOSE 5000
 
