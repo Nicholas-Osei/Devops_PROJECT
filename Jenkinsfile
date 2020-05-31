@@ -29,16 +29,6 @@ pipeline {
           echo "Dockerfile Playbook gelukt!"
       }
     }
-   stage("Compose") {
-      steps{
-          echo "Lezen van het dockerfile..."
-          sh " cd /home/pi/Desktop/workspace/Nicholas_Pipeline_Devops"
-	  sh " sudo -i"
-	  sh " docker-compase up"
-          echo "Dockerfile Playbook gelukt!"
-      }
-    }
-
     stage("Container") {
       steps{
           echo "Container aan het maken..."
