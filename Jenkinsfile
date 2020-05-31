@@ -35,6 +35,7 @@ pipeline {
       steps{
           echo "Container aan het maken..."
           sh " ansible-playbook nicholas_container.yml"
+ 	  sh " ansible-playbook nicholas_docker-compose.yml"
           echo "Containtainer is aangemaakt!"
           
       }
