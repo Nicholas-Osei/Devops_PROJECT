@@ -25,8 +25,6 @@ pipeline {
     stage("Dockerfile") {
       steps{
           echo "Lezen van het dockerfile..."
-          sh "pwd"
-          sh "ls"
           sh " ansible-playbook nicholas_dockerfile.yml"
           echo "Dockerfile Playbook gelukt!"
       }
