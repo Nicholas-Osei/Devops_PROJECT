@@ -1,6 +1,13 @@
 pipeline {
     agent {node{label'raspberry pi'}}
     stages {
+    stage("Ping"){
+        steps{
+            echo "Pingen naar Rpi(connectie test...)"
+            sh " ansible-playbook ping.yml"
+            echo "Ping Gelukt!"
+      }
+    }
     stage("Compile"){
         steps{
             echo "Controleren op fouten in je bestanden(tabs, foute import enz...)"
