@@ -49,7 +49,7 @@
 
 #Groep naam
 [rpi_Nicholas]
-192.168.1.47 ansible_user=pi
+192.168.0.148 ansible_user=pi
 
 #[webserver:vars]
 #ansible_python_interpreter=/usr/bin/python3
